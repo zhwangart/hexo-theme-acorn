@@ -1,0 +1,117 @@
+toggle-width  = 24px
+toggle-height = toggle-width * 0.8
+toggle-line   = 2px
+
+
+#mobile-nav-toggle
+  position: absolute
+  z-index 9
+  bottom: 0
+  top: 0
+  left: spacer
+  width: toggle-width
+  height: toggle-height
+  margin: auto
+  opacity: .5
+  cursor: pointer
+  transition: transition-base
+  &:active, .mobile-nav-on &
+    opacity: 1
+  @media screen and (min-width: 768px)
+    display: none
+
+.mobile-nav-toggle-bar
+  background: dark-color
+  position: absolute
+  left: 0
+  width: 100%
+  height: toggle-line
+  transition: transition-base
+  transform-origin: 0
+  border-radius: toggle-line
+  &:first-child
+    top: 0
+    .mobile-nav-on &
+      transform: rotate(45deg)
+  &:nth-child(2)
+    top: (toggle-height - toggle-line) * 0.5
+    .mobile-nav-on &
+      opacity: 0
+  &:last-child
+    top: toggle-height - toggle-line
+    .mobile-nav-on &
+      transform: rotate(-45deg)
+  .header-absolute &
+    background: white
+
+
+#mobile-nav-dimmer
+  position: absolute
+  top: 0
+  left: 100%
+  height: 100%
+  background: black
+  opacity: 0
+  transition: transition-base
+  .mobile-nav-on &
+    width: 100%
+    opacity: 0.7
+    transform: translateX(-100%)
+
+
+#mobile-nav
+  position: fixed
+  top: 0
+  width: mobile-nav-width
+  left: @width * -1
+  height: 100%
+  background: dark-color
+  transition: transition-base
+  .mobile-nav-on &
+    transform: translateX(100%)
+
+#mobile-nav-inner
+  overflow-y: auto
+  padding: spacer 0
+  position: absolute
+  bottom: 0
+  right: 0
+  left: 0
+  top: 0
+  -webkit-overflow-scrolling: touch
+
+
+.mobile-nav
+  list-unstyled()
+  margin-bottom: 0
+  padding: spacer 0
+  .nav-item
+    display: block
+    position: relative
+    .nav-item-link
+      display: block
+      padding: spacer
+      color: light-color
+      white-space: nowrap
+      overflow: hidden
+      text-overflow: ellipsis
+    &.active
+      .nav-item-link
+        color: primary-color
+
+.main
+  transition: transition-base
+  height: 100%
+  -webkit-overflow-scrolling: touch
+  .mobile-nav-on &
+    transform: translateX(mobile-nav-width)
+    overflow: hidden
+    position: fixed
+    top: 0
+    bottom: 0
+
+.navbar
+  @media mq-mobile
+    justify-content: center !important
+    .main-nav
+        display: none

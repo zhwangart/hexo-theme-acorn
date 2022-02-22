@@ -1,0 +1,26 @@
+.carousel
+  position: relative
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  .carousel-radio[type="radio"]
+    position: absolute
+    opacity: 0
+    top: 0
+    center-x()
+    &::after
+      transition none !important
+    & + .carousel-indicators
+      order: 2
+      display: inline-block
+      margin: 2rem .5rem 1rem
+      rounded-circle(spacer)
+      background-color: border-color
+      & + .carousel-inner
+        order: 1
+        flex-grow: 1
+        display: none
+    &:checked + .carousel-indicators
+      background-color: primary-color
+      & + .carousel-inner
+        display: block

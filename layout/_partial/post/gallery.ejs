@@ -1,0 +1,11 @@
+<% if (post.photos && post.photos.length){ %>
+  <% post.photos.forEach(function(photo, i){ %>
+    <% if (is_post()){ %>
+      <img class="artcle-cover-img" src="<%- url_for(photo) %>" itemprop="image">
+      <% } else { %>
+        <a class="card-img-link" href="<%- url_for(post.path) %>" rel="gallery_<%= post._id %>">
+          <img class="card-img" src="<%- url_for(photo) %>" itemprop="image">
+        </a>
+      <% } %> 
+  <% }) %>
+<% } %>

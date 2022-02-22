@@ -1,0 +1,31 @@
+//
+// blockquote
+//
+.blockquote
+  position: relative
+  margin-right: auto
+  margin-left: auto
+  @media mq-normal
+    width: 80%
+  .blockquote-body
+    position: relative
+    padding: spacer spacer * 5
+    &::before
+      position: absolute
+      top: 0
+      left: 0
+      content: url(/images/icons/quotes_before.svg)
+    &::after
+      position absolute
+      right 0
+      bottom 0
+      content: url(/images/icons/quotes_after.svg)
+  .blockquote-footer
+    display: block
+    font-style: italic
+    color: gray-color
+    &::before
+      content: '—'
+      margin-right: spacer
+      display: inline-block
+      width: 1.6rem

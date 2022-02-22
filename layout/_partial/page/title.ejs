@@ -1,0 +1,11 @@
+<%
+  var title = '';
+  if (page.title) title = page.title;
+  if (page.category) title = page.category;
+  if (page.tag) title = "#" + "&nbsp" + page.tag;
+  if (page.archive) {
+    if (page.year) title = page.year + (page.month ? '/' + page.month : '');
+    else title = __('archive_a');
+  }
+%>
+<h1 class="page-type-title"><%- title %></h1>

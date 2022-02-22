@@ -1,0 +1,18 @@
+<div class="banner mb-5">
+  <div class="banner-text text-center">
+    <!-- page-type-title -->
+    <% if (!is_post()) { %>
+      <%- partial('page/title') %>
+    <% } %>
+    <!-- page-type-slogan -->
+    <h4 class="slogan font-w-lighter">
+    <% if (is_archive()) { %>
+      <%- theme.slogan.archives %>
+    <% } else if (is_page()) { %>
+      <%- theme.slogan.pages %>
+    <% } else {%>
+      <%- theme.slogan.posts %>
+    <% } %>
+    </h4>
+  </div>
+</div>

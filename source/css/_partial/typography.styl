@@ -1,0 +1,87 @@
+//
+// Typography
+//
+h1,h2,h3,h4,h5,h6,
+p,ul,ol,dl
+  padding-top: 0
+  margin-top: 0
+  margin-bottom: spacer
+ul
+  list-style: disc
+ol
+  list-style: decimal
+dt
+  font-weight: bold
+
+// 
+strong
+    font-weight: bold
+em, cite
+  font-style: italic
+sup, sub
+  font-size: 75%
+  line-height: 0
+  position: relative
+  vertical-align: baseline
+sup
+  top: -0.5em
+sub
+  bottom: -0.2em
+small
+  font-size: 85%
+acronym, abbr
+  border-bottom: 1px dotted
+
+// Links
+a
+  color: link-color
+  text-decoration: none
+  &:hover
+    color: link-hover-color
+  &:active
+    color: link-active-color
+  &.disabled
+    color: disabled-color
+
+// Title  
+for name,value in font-sizes
+  h{name},
+  .h{name}
+    font-size: value
+
+.hr
+  border: none
+  border-bottom: border-width border-color solid
+  margin: spacer 0
+
+// Text align
+for name in (center right left)
+  .text-{name}
+    text-align: name
+
+for name in (normal bold bolder lighter)
+  .font-w-{name}
+    font-weight: name
+
+for name,value in theme
+  .text-{name}
+    color: value !important
+  .bg-{name}
+    background-color: value !important
+  .btn-{name}
+    background-color: value
+    border-color: value
+    &:hover
+      background-color: lighten(value, 10%)
+
+.img-fluid
+  max-width: 100%
+
+.currency
+  &::before
+    content: attr(data-currency)
+    font-size: 50%
+    font-weight: normal
+    margin-right: .5rem
+
+@import "blockquote"

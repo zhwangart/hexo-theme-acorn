@@ -1,0 +1,68 @@
+//
+// Flex
+//
+// Direction
+.flex-row
+  flex-direction: row
+
+.flex-column
+  flex-direction: column
+
+.flex-wrap
+  flex-wrap: wrap
+
+.flex-nowrap
+  flex-wrap: nowrap
+
+// Justify content
+justify-content = {
+  start: flex-start
+  end: flex-end
+  center: center
+  between: space-between
+  around: space-around
+  evenly: space-evenly
+}
+for name,value in justify-content
+  .justify-content-{name}
+    justify-content: value
+
+// Align items
+align-items = {
+  start: flex-start
+  end: flex-end
+  center: center
+  baseline: baseline
+  stretch: stretch
+}
+for name,value in align-items
+  .align-items-{name}
+    align-items: value
+
+// Align content
+align-content = {
+  start: flex-start
+  end: flex-end
+  center: center
+  between: space-between
+  around: space-around
+  stretch: stretch
+}
+for name,value in align-content
+  .align-content-{name}
+    align-content: value
+
+// Align self
+align-self = {
+  auto: auto
+  start: flex-start
+  end: flex-end
+  center: center
+  baseline: baseline
+  stretch: stretch
+}
+for name,value in align-self
+  .align-self-{name}
+    align-self: value
+
+//

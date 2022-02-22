@@ -1,0 +1,68 @@
+//
+// Album
+//
+.album-grid
+  display: grid
+  grid-auto-flow: row dense
+  grid-gap: border-width
+  .album-grid-item
+    position: relative
+    overflow: hidden
+    padding-bottom: 100%
+
+.album-grid-6
+  grid-template-columns: repeat(2, 1fr)
+  @media mq-normal
+    grid-template-columns: repeat(3, 1fr)
+  @media (min-width: 992px)
+    grid-template-columns: repeat(4, 1fr)
+    .album-grid-item
+      &:nth-of-type(1)
+        grid-column-start: span 2
+        padding-bottom: 50%
+      &:nth-of-type(2)
+        grid-row-start: span 2
+
+//    
+.album-art
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  overflow: hidden
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+  &::after,
+  .album-art-text
+    position: absolute
+    left: 0
+  &::after
+    content: ''
+    z-index: 2
+    top: 0
+    background-color: dark-color
+    opacity: 0
+    sizing(100%)
+    transition(transition-base)
+  .album-art-text
+    z-index: 3
+    bottom: 0
+    width: 100%
+    height: auto
+    padding: spacer
+    background-color: rgba(primary-color, 1)
+    color: light-color
+    transform: translateY(100%)
+    transition(transition-base)
+  &:hover
+    &::after
+      opacity: .75
+    .album-art-text
+      transform: translateY(0)
+  
+  
+  
+  
+  

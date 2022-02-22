@@ -1,0 +1,17 @@
+//
+// Section
+//
+.section
+  .section-heading
+    position: relative
+    padding-bottom: spacer
+    color: primary-color
+    &::after
+      content: ''
+      position: absolute
+      center-x()
+      bottom: 0
+      width: 5rem
+      height: border-width * 3
+      background-color: secondary-color
+      border-radius: border-width * 3 / 2

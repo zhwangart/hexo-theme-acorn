@@ -1,0 +1,25 @@
+rounded = {
+  "-0" : 0
+  "" : 0.4rem
+  "-spacer" : 1rem
+  "-circle" : 50%
+}
+
+.border
+  border-style: solid
+  border-width: border-width
+  border-color: border-color
+  
+for name in (none dotted solid double dashed)
+  .border-{name}
+    border-style: name
+
+for name,value in rounded
+  .rounded{name}
+    border-radius: value !important
+
+
+.rounded-top
+  border-top-radius(border-radius-value !important)
+.rounded-bottom
+  border-bottom-radius(border-radius-value !important)

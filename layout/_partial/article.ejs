@@ -1,0 +1,46 @@
+<article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %>" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <% if (post.excerpt && index){ %>
+  <div class="card shadow-hover">
+    <%- partial('post/gallery') %>
+    <div class="card-body bg-light">
+      <%- partial('post/title', {class_name: 'article-title'}) %>
+      <div class="card-text"><%- post.excerpt %></div>
+      <%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
+      <hr class="hr">
+      <% if (theme.excerpt_link){ %>
+      <div class="article-more-link">
+        <a href="<%- url_for(post.path) %>#more"><%= theme.excerpt_link %></a>
+      </div>
+      <% } %>
+    </div>
+  </div>
+  <% } else { %>
+  <% if (!is_page()) { %>
+  <div class="artcle-cover mb-5">
+    <%- partial('post/gallery') %>
+  </div>
+  <% } %>
+  <div class="article-inner">
+    <% if (post.link || post.title){ %>
+    <header class="article-header">
+      <% if (!is_page()) { %>
+      <%- partial('post/title', {class_name: 'article-title'}) %>
+      <div class="article-meta">
+        <%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
+        <%- partial('post/category') %>
+      </div>
+      <% } %>
+    </header>
+    <% } %>
+    <div class="article-entry" itemprop="articleBody">
+      <%- post.content %>
+    </div>
+    <footer class="article-footer">
+      <%- partial('post/tag') %>
+    </footer>
+  </div>
+  <% } %>
+  <% if (!index){ %>
+    <%- partial('post/nav') %>
+  <% } %>
+</article>

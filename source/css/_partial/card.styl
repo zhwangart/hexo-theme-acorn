@@ -1,0 +1,28 @@
+//
+// Card
+//
+.card
+  position: relative
+  overflow: hidden
+  transition: transition-base
+  .card-img
+    display: block
+    max-width: 100%
+  .card-body,
+  .card-footer
+    padding: spacer * 2
+  .card-body
+    .archive-article-title + time
+      display: inline-block
+      margin-bottom: spacer
+  .card-text,
+  .card-text > p
+    word-break: break-all
+    text-overflow: ellipsis
+    display: -webkit-box
+    -webkit-box-orient: vertical
+    -webkit-line-clamp: 2
+    overflow: hidden
+    min-height: font-line-height * font-size-base * 2
+    margin-bottom: 0
+

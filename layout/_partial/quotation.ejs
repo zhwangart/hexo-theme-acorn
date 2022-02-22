@@ -1,0 +1,28 @@
+<!-- 
+	Data Files: instapic/_data/quotation.yml
+-->
+<blockquote class="blockquote text-center">
+	<div class="carousel">
+		<% for (var item in site.data.quotation){%>
+			<input type="radio" class="carousel-radio" name="carousel" id="carousel-<%=site.data.quotation[item]['number'] %>" value="<%=site.data.quotation[item]['number'] %>">
+			<label class="carousel-indicators" for="carousel-<%=site.data.quotation[item]['number'] %>"></label>
+			<div class="carousel-inner">
+				<div class="blockquote-body">
+					<p><%=site.data.quotation[item]['words'] %></p>
+				</div>
+				<footer class="blockquote-footer"><%=site.data.quotation[item]['name'] %></footer>
+			</div>
+		<%} %>
+	</div>
+</blockquote>
+
+<script>
+	var tesObj = document.getElementsByName("carousel");
+	//设置 value 值为 0 选中
+	for(var i=0; i < tesObj.length; i++){
+		if (tesObj[i].value=="0"){
+			tesObj[i].checked = true;
+			break;
+			}
+	}
+</script>

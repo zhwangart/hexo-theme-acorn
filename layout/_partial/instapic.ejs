@@ -1,0 +1,8 @@
+<!-- 
+  Data Files: instapic/_data/instapic.yml
+-->
+<div class="instapic text-center">
+  <% for (var item in site.data.instapic){%>
+    <img class="brand-img" src="<%=site.data.instapic[item]['cover'] %>" alt="<%=site.data.instapic[item]['name'] %>">
+  <%} %>
+</div>

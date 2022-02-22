@@ -1,0 +1,40 @@
+# Header
+menu:
+  首页: /
+  产品中心: /products
+  成功案例: /portfolio
+  新闻动态: /archives
+  关于: /about
+
+# Content
+excerpt_link: 阅读全文
+
+# MIIT ICP/IP/DOMAIN
+beian: 
+  enable: false
+  number: 
+  url: https://beian.miit.gov.cn/
+
+# Miscellaneous
+favicon: /favicon.ico
+brand:   /images/brand.svg
+webclip: /images/webclip
+
+# Jumbotron & Video
+jumbotron: 
+  slogan: 焕然一新
+  caption: Acorn 是一颗适用于中小企业的 Hexo 主题
+## Video
+video: 
+  overlay: true
+  path: /images/
+
+# Hero & Picture
+
+
+# Banner
+slogan:
+  archives: 汇聚热点话题 打造创新思路
+  pages: 运维更智能 部署更方便 应用更便捷
+  posts: 实践见真知既是最好的解释
+

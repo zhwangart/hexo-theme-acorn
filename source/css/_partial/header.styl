@@ -1,0 +1,33 @@
+//
+// Header & Nav
+//
+.header
+  position: relative
+  width: 100%
+  z-index: 9
+  margin-bottom: 3rem
+  box-shadow: 0 .5rem 1rem rgba(dark-color, .05)
+  transition: transition-base
+  .brand
+    position: relative
+    z-index: 9
+    .logo
+      height: brand-height
+  &.header-absolute,
+  &.header-fixed
+    z-index: 9
+    left: 0
+    top: 0
+  &.header-absolute
+    position: absolute
+    .main-nav .nav-item-link
+      color: light-color
+  &.header-fixed
+    position: fixed
+    background-color: white
+
+//
+// Nav
+@import "main-nav"
+@import "mobile-nav"
+

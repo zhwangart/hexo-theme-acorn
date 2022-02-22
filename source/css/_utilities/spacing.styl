@@ -1,0 +1,39 @@
+//
+// Spacing
+//
+margin-x()
+  margin-right: arguments
+  margin-left: arguments
+margin-y()
+  margin-top: arguments
+  margin-bottom: arguments
+
+padding-x()
+  padding-right: arguments
+  padding-left: arguments
+padding-y()
+  padding-top: arguments
+  padding-bottom: arguments
+
+//
+attributes = {
+  m  : margin
+  mx : margin-x
+  my : margin-y
+  mt : margin-top
+  mr : margin-right
+  mb : margin-bottom
+  ml : margin-left
+  p  : padding
+  px : padding-x
+  py : padding-y
+  pt : padding-top
+  pr : padding-right
+  pb : padding-bottom
+  pl : padding-left
+}
+
+for spacing,attribute in attributes
+  for name,value in spacers
+    .{spacing}-{name}
+      {attribute} value !important

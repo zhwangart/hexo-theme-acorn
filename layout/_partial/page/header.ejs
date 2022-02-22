@@ -1,0 +1,16 @@
+<div class="page-header">
+  <!-- page-type-title -->
+  <% if (!is_post()) { %>
+    <%- partial('title') %>
+  <% } %>
+  <!-- page-type-slogan -->
+  <h5 class="slogan font-w-lighter text-gray">
+    <% if (is_archive()) { %>
+    <%- theme.banner.archives %>
+    <% } else if (is_page()) { %>
+    <%- theme.banner.pages %>
+    <% } else {%>
+    <%- theme.banner.posts %>
+    <% } %>
+  </h5>
+</div>

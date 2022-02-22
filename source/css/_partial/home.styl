@@ -1,0 +1,88 @@
+//
+// home styles ...
+//
+.jumbotron
+    height auto
+
+// Video
+.video
+  position relative
+  height auto
+
+.video-media
+  position relative
+  z-index 0
+  height 100vh
+  overflow hidden
+  video, img
+    position absolute
+    center()
+    min-width 100%
+    min-height 100%
+  article
+    position absolute
+    top 0
+    right 0
+    bottom 0
+    left 0
+    background-color rgba(darken(primary-color, 85%), .85)
+    .article-inset
+      position absolute
+      center()
+      display block
+      color light-color
+      text-align center
+      font-size large
+      
+.video-frame
+  position absolute
+  z-index 1
+  right 0
+  bottom 0
+  left 0
+  min-width 100%
+  img
+    display block
+    width 100%
+    transform scale(2)
+    transform-origin top center;
+
+@keyframes twinkling
+  0%
+    opacity .25
+  50%
+    opacity 1
+  100%
+    opacity .25
+
+.video-learn-more
+  position: absolute
+  z-index: 2
+  bottom: spacer
+  center-x()
+  animation: twinkling 3s linear infinite
+  a
+    display: inline-block
+    color: light-color
+    transition: transition-base
+    &:hover
+      color: white
+
+// Hero
+.hero
+  background-color: white
+
+// _utilities/safari.styl
+
+// .carousel
+//     height 60vh
+
+//
+.instapic
+  margin: spacer * -1
+  .brand-img
+    padding: spacer
+    height: 6.4rem
+
+
+// home archive styles ...

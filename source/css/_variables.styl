@@ -1,0 +1,129 @@
+// Config
+support-for-ie = false
+vendor-prefixes = webkit moz ms official
+
+// Fonts
+font-size-browser = 62.5%
+font-size-base    = 1.6rem
+font-family-base  = "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif
+font-line-height  = 1.5
+
+// Color system
+// Bootstrap v4.3.1 (https://getbootstrap.com/)
+white      = #fff
+gray-100   = #f8f9fa
+gray-200   = #e9ecef
+gray-300   = #dee2e6
+gray-400   = #ced4da
+gray-500   = #adb5bd
+gray-600   = #6c757d
+gray-700   = #495057
+gray-800   = #343a40
+gray-900   = #212529
+black      = #000
+//
+// Visual Identity System
+@import "_colors"
+//
+primary-color   = vis-primary-color
+secondary-color = vis-secondary-color
+success-color   = vis-success-color
+danger-color    = vis-danger-color
+warning-color   = vis-warning-color
+info-color      = vis-info-color
+light-color     = gray-100
+gray-color      = gray-600
+dark-color      = gray-900
+
+theme = {
+  primary    : primary-color
+  secondary  : secondary-color
+  success    : success-color
+  danger     : danger-color
+  warning    : warning-color
+  info       : info-color
+  light      : light-color
+  gray       : gray-color
+  dark       : dark-color
+  white      : white
+}
+
+// Link colors
+link-color         = primary-color
+link-hover-color   = lighten(primary-color, 10%)
+link-active-color  = darken(primary-color, 10%)
+disabled-color     = gray-color
+
+// Body Colors
+body-background-color = white
+body-text-color       = dark-color
+
+// Border
+border-radius-value   = 0.4rem
+border-width          = 0.1rem
+border-color          = gray-300
+
+// Font-sizes
+$h1-font-size = font-size-base * 2.5
+$h2-font-size = font-size-base * 2
+$h3-font-size = font-size-base * 1.75
+$h4-font-size = font-size-base * 1.5
+$h5-font-size = font-size-base * 1.25
+$h6-font-size = font-size-base
+
+font-sizes = {
+  "1": $h1-font-size,
+  "2": $h2-font-size,
+  "3": $h3-font-size,
+  "4": $h4-font-size,
+  "5": $h5-font-size,
+  "6": $h6-font-size
+}
+
+// Transition all
+transition-base   = all 0.3s ease-in-out 0s
+
+// Gutters
+spacer  = 1rem
+
+spacers = {
+  "0" : 0
+  "1" : spacer * .25
+  "2" : spacer * .5
+  "3" : spacer
+  "4" : spacer * 1.5
+  "5" : spacer * 3
+}
+
+grid-columns      = 12
+grid-gutter-width = spacer
+
+// Grid-breakpoints
+grid-breakpoints = {
+  xs  : 0
+  sm  : 576px
+  md  : 768px
+  lg  : 992px
+  xl  : 1200px
+  xxl : 1400px
+}
+// Container-max-widths
+container-max-widths = {
+  sm  : 540px
+  md  : 720px
+  lg  : 960px
+  xl  : 1140px
+  xxl : 1320px
+}
+
+// Layout
+max-width         = 114rem
+sidebar-width     = 22rem
+mobile-nav-width  = 26rem
+// Navbar
+brand-height      = 4rem
+
+// Media queries
+mq-mobile = "screen and (max-width: 768px)"
+mq-normal = "screen and (min-width: 769px)"
+mq-tablet = "screen and (min-width: 480px)"

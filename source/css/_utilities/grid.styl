@@ -1,0 +1,30 @@
+//
+// Grid flex
+//
+.row
+  display: flex
+  flex-direction: column
+  margin: spacer * -1
+  .col
+    flex: 1 1 auto
+    padding: grid-gutter-width
+
+// Media Query
+.row
+    flex-direction: column
+    @media mq-normal
+      flex-direction: row
+  for i in 1 2 3 4 5 6 7 8 9 10 11 12
+    .col-{i}
+      padding: grid-gutter-width
+      width: 100%
+      @media mq-normal
+        width: 100% * (i/grid-columns)
+
+.no-gutters
+  margin: 0
+  > .col
+    padding: 0
+  for i in 1 2 3 4 5 6 7 8 9 10 11 12
+    .col-{i}
+      padding: 0

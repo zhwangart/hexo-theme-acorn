@@ -1,0 +1,42 @@
+<footer class="footer pt-5 mt-5">
+  <div class="container">
+    <div class="py-3">
+      <div class="row justify-content-between">
+        <div class="col-6">
+          <img class="filter-gray mb-3" height="40" src="<%- theme.brand %>" alt="<%= config.title %>">
+          <p class="mb-4"><%= config.description %></p>
+          <ul class="list-inline">
+            <% for (var item in site.data.contact){%>
+              <li class="list-inline-item">
+                <a href="<%=site.data.contact[item]['link'] %>">
+                  <%- image_tag(site.data.contact[item]['icon'], [site.data.contact[item]['name']]) %>
+                </a>
+              </li>
+            <%} %>
+          </ul>
+        </div>
+        <div class="col-4">
+          <h5>友情链接</h5>
+          <ul class="list-inline">
+            <% for (var item in site.data.links){%>
+              <li class="list-inline-item">
+                <%- link_to(site.data.links[item]['link'], site.data.links[item]['name'], {external: true}) %>
+              </li>
+            <%} %>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <hr class="hr" style="opacity: .25;">
+    <div class="pt-3 pb-5">
+      <ul class="list-inline mb-0 text-center">
+        <li class="list-inline-item">&copy; <%= date(new Date(), 'YYYY') %> <%= config.title || config.author %></li>
+        <% if (theme.beian.enable){ %>
+          <li class="list-inline-item"><%- theme.beian.number %></li>
+        <% } %>
+        <li class="list-inline-item"><%= __('powered_by') %> <a href="http://hexo.io/" target="_blank">Hexo</a></li>
+        <li class="list-inline-item"><%= __('Designer') %> <a href="https://acorn.imaging.xin/" target="_blank"><%= config.author %></a></li>
+      </ul>
+    </div>
+  </div>
+</footer>

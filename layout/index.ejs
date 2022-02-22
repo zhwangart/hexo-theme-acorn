@@ -1,0 +1,63 @@
+<!-- Index -->
+
+<%- partial('_partial/page/jumbotron', {cache: true}) %>
+
+<section class="section py-5">
+  <div class="container">
+    <%- partial('_partial/culture', {cache: true}) %>
+  </div>
+</section>
+
+<section class="section py-5">
+  <div class="container-fluid">
+    <div class="section-heading text-center mb-5">
+      <h3>场景应用</h3>
+      <p class="text-gray">运维更智能、部署更方便、应用更便捷</p>
+    </div>
+    <div class="section-body">
+      <%- partial('_partial/album', {cache: true}) %>
+    </div>
+  </div>
+</section>
+
+<section class="section py-5">
+  <div class="container">
+    <div class="section-heading text-center mb-5">
+      <h3>服务客户</h3>
+      <p class="text-gray">我们的客户来自世界上最好的公司</p>
+    </div>
+    <div class="section-body">
+      <%- partial('_partial/instapic', {cache: true}) %>
+    </div>
+    <div class="section-body">
+      <%- partial('_partial/quotation', {cache: true}) %>
+    </div>
+  </div>
+</section>
+
+<section class="section py-5 bg-light">
+  <div class="container">
+    <div class="section-heading text-center mb-5">
+      <h3>成功案例</h3>
+      <p class="text-gray">实践见真知既是最好的解释</p>
+    </div>
+    <div class="section-body">
+      <%- partial('_partial/page/projects') %>
+    </div>
+  </div>
+</section>
+
+<section class="section py-5">
+  <div class="container">
+    <div class="section-heading text-center mb-5">
+      <h3>新闻动态</h3>
+      <p class="text-gray">汇聚热点话题 打造创新思路</p>
+    </div>
+    <div class="section-body">
+      <%- partial('_partial/archive', {pagination: 2, index: true}) %>
+    </div>
+    <div class="d-flex justify-content-center pt-5">
+      <%- link_to('/archives/', '→ 查看更多',{class: 'btn btn-lg bg-white shadow-hover'}) %>
+    </div>
+  </div>
+</section>

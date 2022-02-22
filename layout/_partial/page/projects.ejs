@@ -1,0 +1,21 @@
+
+<div class="row">
+  <% for (var item in site.data.projects){%>
+    <div class="col">
+      <div class="card bg-white">
+        <a href="<%=site.data.projects[item]['link'] %>">
+          <img class="card-img" src="<%=site.data.projects[item]['cover'] %>" alt="<%=site.data.projects[item]['name'] %>">
+        </a>
+        <div class="card-body px-4">
+          <h5 class="card-title">
+            <a href="<%=site.data.projects[item]['link'] %>">
+              <%=site.data.projects[item]['name'] %>
+            </a>
+          </h5>
+          <hr class="hr">
+          <p class="card-text text-gray"><%=site.data.projects[item]['description'] %></p>
+        </div>
+      </div>
+    </div>
+  <%} %>
+</div>

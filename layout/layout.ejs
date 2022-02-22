@@ -1,0 +1,13 @@
+<%- partial('_partial/head') %>
+<body>
+  <main class="main">
+    <%- partial('_partial/header', {cache: true}) %>
+    <section>
+      <%- body %>
+    </section>
+    <%- partial('_partial/footer', {cache: true}) %>
+  </main>
+  <%- partial('_partial/mobile-nav') %>
+  <%- partial('_partial/after-footer') %>
+</body>
+</html>
