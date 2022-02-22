@@ -29,4 +29,3 @@ theme: acorn
 cd themes/acorn
 git pull
 ```
-
