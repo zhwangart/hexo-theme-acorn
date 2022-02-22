@@ -2,7 +2,10 @@
 
 Acorn is a Hexo theme for small to medium sized businesses or studios.
 
-[Preview](https://acorn.imaging.xin)
+## Example
+
+- [Acorn](https://acorn.imaging.xin/)
+- [圣思睿](https://saintree.cn)
 
 [中文文档](https://acorn.imaging.xin/docs/)
 
@@ -27,4 +30,3 @@ cd themes/acorn
 git pull
 ```
 
-## Example# hexo-theme-acorn
