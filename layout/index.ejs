@@ -8,56 +8,31 @@
   </div>
 </section>
 
-<section class="section py-5">
-  <div class="container-fluid">
-    <div class="section-heading text-center mb-5">
-      <h3>场景应用</h3>
-      <p class="text-gray">运维更智能、部署更方便、应用更便捷</p>
-    </div>
-    <div class="section-body">
-      <%- partial('_partial/album', {cache: true}) %>
-    </div>
-  </div>
-</section>
+<% for (var section in site.data.index){%>
+  <section class="section py-5 <%=site.data.index[section]['bg_color'] %>">
+    <div class="container<%=site.data.index[section]['fluid'] %>">
+      <div class="section-heading text-center mb-5">
+        <h3><%=site.data.index[section]['title'] %></h3>
+        <p class="text-gray"><%=site.data.index[section]['subtitle'] %></p>
+      </div>
 
-<section class="section py-5">
-  <div class="container">
-    <div class="section-heading text-center mb-5">
-      <h3>服务客户</h3>
-      <p class="text-gray">我们的客户来自世界上最好的公司</p>
+      <% if ('partial' in site.data.index[section]) { %>
+        <div class="section-body">
+          <%- partial('_partial/'+site.data.index[section]['partial'], {pagination: 2, index: true}) %>
+        </div>
+      <% }else if('partials' in site.data.index[section]) { %>
+        <% for (var partialIndex in site.data.index[section]['partials']){%>
+          <div class="section-body">
+            <%- partial('_partial/'+site.data.index[section]['partials'][partialIndex], {pagination: 2, index: true}) %>
+          </div>
+        <% } %>
+      <% } %>
+      <% if ('more' in site.data.index[section] && site.data.index[section]['more'] !== null ) { %>
+        <div class="d-flex justify-content-center pt-5">
+          <%- link_to(site.data.index[section]['more'], '→ 查看更多',{class: 'btn btn-lg bg-white shadow-hover'}) %>
+        </div>
+      <% } %>
     </div>
-    <div class="section-body">
-      <%- partial('_partial/instapic', {cache: true}) %>
-    </div>
-    <div class="section-body">
-      <%- partial('_partial/quotation', {cache: true}) %>
-    </div>
-  </div>
-</section>
+  </section>
+<%} %>
 
-<section class="section py-5 bg-light">
-  <div class="container">
-    <div class="section-heading text-center mb-5">
-      <h3>成功案例</h3>
-      <p class="text-gray">实践见真知既是最好的解释</p>
-    </div>
-    <div class="section-body">
-      <%- partial('_partial/page/projects') %>
-    </div>
-  </div>
-</section>
-
-<section class="section py-5">
-  <div class="container">
-    <div class="section-heading text-center mb-5">
-      <h3>新闻动态</h3>
-      <p class="text-gray">汇聚热点话题 打造创新思路</p>
-    </div>
-    <div class="section-body">
-      <%- partial('_partial/archive', {pagination: 2, index: true}) %>
-    </div>
-    <div class="d-flex justify-content-center pt-5">
-      <%- link_to('/archives/', '→ 查看更多',{class: 'btn btn-lg bg-white shadow-hover'}) %>
-    </div>
-  </div>
-</section>

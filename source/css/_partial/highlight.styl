@@ -1,16 +1,17 @@
 // https://github.com/chriskempson/tomorrow-theme
-highlight-background = #fff
-highlight-current-line = #efefef
-highlight-selection = #d6d6d6
-highlight-foreground = #4d4d4c
-highlight-comment = #8e908c
-highlight-red = #c82829
-highlight-orange = #f5871f
-highlight-yellow = #eab700
-highlight-green = #718c00
-highlight-aqua = #3e999f
-highlight-blue = #4271ae
-highlight-purple = #8959a8
+// Tomorrow Night Eighties
+highlight-background   = #2d2d2d
+highlight-current-line = #393939
+highlight-selection    = #515151
+highlight-foreground   = #cccccc
+highlight-comment      = #999999
+highlight-red          = #f2777a
+highlight-orange       = #f99157
+highlight-yellow       = #ffcc66
+highlight-green        = #99cc99
+highlight-aqua         = #66cccc
+highlight-blue         = #6699cc
+highlight-purple       = #cc99cc
 
 pre, code
   font-family: font-family-base
@@ -29,7 +30,7 @@ pre
     padding: 0
 
 .highlight
-  background: #eee
+  background: highlight-background
   color: highlight-foreground
   overflow: auto
   margin: 0
@@ -113,18 +114,29 @@ pre
     color: #22863a
 
 // user
+code
+  display: inline-block
+  border-radius(border-radius-value)
+
 .highlight
+  border-radius(border-radius-value)
+  margin: 1rem 0
+  padding: 1rem 0
+  overflow: auto
   pre
-    margin 0
+    margin: 0
   table
-    td.gutter,
-    td.code
-      padding .5rem 1rem
-    td.gutter
-      text-align right
-      border-right border-width border-color solid
-      color gray-color !important
+    width: auto
+    &, tr, th, td
+      border: none
+    .gutter,
+    .code
+      padding: .5rem 1rem
+    .gutter
+      text-align: right
+      color: gray-color !important
+      user-select: none
   figcaption
-    padding .5rem 1rem
-    margin-bottom 0
-    border-bottom border-width border-color solid
+    padding: .5rem 1rem
+    margin-bottom: 0
+    border-bottom: border-width border-color solid

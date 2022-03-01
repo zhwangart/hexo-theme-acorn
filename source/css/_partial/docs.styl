@@ -1,0 +1,54 @@
+//
+// Docs
+//
+docs-sidebar-width = 20rem
+
+.docs_wrap
+  clearfix()
+
+.docs_sidebar,
+.docs_article
+	position: relative
+
+.docs_sidebar
+  display: none
+  float: left 
+  width: docs-sidebar-width 
+  margin-left: -(@width)
+
+.docs_article
+  float: right
+  width: 100%
+
+@media mq-normal
+  .docs_wrap
+    margin-left: docs-sidebar-width
+  .docs_sidebar
+    display: block
+
+.docs-nav
+	clearfix()
+	border-top: border-width border-color solid
+	.docs-nav-prev,
+	.docs-nav-next
+		display: inline-block
+		padding: spacer
+	.docs-nav-prev
+		float: left
+	.docs-nav-next
+		float: right
+
+// .docs_menus
+
+.menu
+	list-unstyled()
+	// .menu-title
+	.menu-item
+		position: relative
+		.menu-item-link
+			display: inline-block
+			padding: 0.25rem 0
+			color: gray-color
+		&.active
+			.menu-item-link
+				color: primary-color

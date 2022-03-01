@@ -1,0 +1,88 @@
+//
+// Extend
+//
+$base-style
+  line-height: 1.75
+  a
+    text-decoration: none
+    padding-bottom: .1rem
+    border-bottom: .2rem solid rgba(primary-color, .25)
+    transition(transition-base)
+    &:hover
+      border-bottom-color: rgba(primary-color, .75)
+    &:active
+      border-bottom-style: dashed
+  strong
+    font-weight bold
+  em, cite
+    font-style italic
+    color: gray-600
+  sup, sub
+    font-size 75%
+    line-height 0
+    position relative
+    vertical-align baseline
+  sup
+    top -.5rem
+  sub
+    bottom -.25rem
+  small
+    font-size 85%
+  mark
+    background-color rgba(yellow, .25)
+  acronym, abbr
+    border-bottom border-width border-color dotted
+  ul, ol, dl
+    margin 1.5rem 0
+    line-height line-height
+
+  ul, ol
+    padding-left 1em
+
+  ul
+    list-style-type circle
+
+  p, table, blockquote
+    margin 1.5rem 0
+
+  img, video
+    max-width 100%
+    height auto
+    display block
+    margin auto
+  iframe
+    border none
+  table
+    width 100%
+    border-collapse collapse
+    vertical-align middle
+    empty-cells show
+    text-align left
+    th, td, &
+      border border-width border-color solid
+    th, td
+      padding spacer
+    tbody
+      tr:nth-child(2n)
+        background-color light-color
+  //
+  hr
+    border: none
+    border-bottom: border-width border-color solid
+    margin: spacer 0
+  
+  blockquote
+    position relative
+    display block
+    padding-left: 2rem
+    width 100%
+    overflow auto
+    border-left: 0.4rem secondary-color solid
+    color: gray-color
+    p
+      margin 0
+    footer
+      cite
+        &:before
+          content "—"
+          padding 0 .5rem

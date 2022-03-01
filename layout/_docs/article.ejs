@@ -1,0 +1,16 @@
+<div class="docs-inner">
+  <% if (theme.toc){ %>
+    <%- partial('_docs/tocbot') %>
+  <% } %>
+  <div class="js-toc-content">
+    <div class="docs-header">
+      <h1 class="font-w-normal"><%- page.title %></h1>
+    </div>
+    <div class="docs-entry article-entry">
+      <%- page.content %>
+    </div>
+    <%- partial('_docs/nav') %>
+  </div>
+</div>
+
+

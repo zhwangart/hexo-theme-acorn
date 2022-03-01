@@ -1,4 +1,4 @@
-<div class="page-header">
+<div class="page-heading">
   <!-- page-type-title -->
   <% if (!is_post()) { %>
     <%- partial('title') %>
@@ -6,11 +6,11 @@
   <!-- page-type-slogan -->
   <h5 class="slogan font-w-lighter text-gray">
     <% if (is_archive()) { %>
-    <%- theme.banner.archives %>
+    <%- theme.slogan.archives %>
     <% } else if (is_page()) { %>
-    <%- theme.banner.pages %>
+    <%- theme.slogan.pages %>
     <% } else {%>
-    <%- theme.banner.posts %>
+    <%- theme.slogan.posts %>
     <% } %>
   </h5>
 </div>

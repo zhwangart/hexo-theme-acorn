@@ -1,0 +1,37 @@
+//
+// Tocbot
+//
+ls-toc-spacer = 2rem
+js-toc-width  = 18rem
+
+.js-toc
+  position: sticky
+  float: right
+  top: 0
+  width: js-toc-width
+  border-left: border-width border-color solid
+  font-size: 1.4rem
+
+.js-toc-content
+  position: relative
+  margin-right: js-toc-width + ls-toc-spacer
+
+.toc-list
+  list-unstyled()
+  margin-left: ls-toc-spacer
+  .toc-list-item
+    position: relative
+    .toc-link
+      display: inline-block
+      padding: 0.25rem 0
+      color: gray-color
+    &.is-active-li
+      > .toc-link
+          color: primary-color
+    > .toc-list
+        margin-left: 1em
+        .toc-list-item
+          list-style-type: '-'
+          padding-left: 0.5rem
+          &::marker
+            color: gray-color

@@ -3,7 +3,7 @@
 //
 .artcle-cover
   position: relative
-  height: 20rem
+  max-height: 20rem
   border-radius(border-radius-value)
   overflow: hidden
   .artcle-cover-img
@@ -28,6 +28,35 @@
 
 .article-tag-list
   list-unstyled()
+  &::before
+    content: ''
+    background-size: cover
+    background-image: url(/images/icons/tag.svg)
+    sizing(1em)
+    display: inline-block
   .article-tag-list-item
     display: inline-block
     padding: spacer
+
+.article-entry
+  @extend $base-style
+
+// Article Nav
+// post_prev & post_next
+.article-nav
+  border-top: border-width border-color solid
+  clearfix()
+  .article-nav-link-wrap
+    &#article-nav-newer
+      float: left 
+      text-align: left
+    &#article-nav-older
+      float: right
+      text-align: right
+    .article-nav-caption
+      color: dark-color
+
+// Article author avatar
+// Avatar
+.article-author-avatar
+  rounded-circle(2.4em)

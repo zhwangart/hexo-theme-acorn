@@ -74,8 +74,23 @@ for name,value in theme
     &:hover
       background-color: lighten(value, 10%)
 
+.line-clamp
+  overflow: hidden
+  display: -webkit-box
+  -webkit-box-orient: vertical
+
+for name in (1 2 3 4 5)
+  .line-clamp-{name}
+    -webkit-line-clamp: name
+
+.clearfix
+  clearfix()
+
 .img-fluid
   max-width: 100%
+
+.feather
+  vertical-align: text-top
 
 .currency
   &::before

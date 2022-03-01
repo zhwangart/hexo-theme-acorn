@@ -15,7 +15,7 @@
     </div>
   </div>
   <% } else { %>
-  <% if (!is_page()) { %>
+  <% if (is_post()) { %>
   <div class="artcle-cover mb-5">
     <%- partial('post/gallery') %>
   </div>

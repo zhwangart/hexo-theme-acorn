@@ -30,8 +30,11 @@ body
 .feather
   text-align: bottom 
 
+@import "_extend"
+
 // Partial
 @import "_partial/typography"
+@import "_partial/title"
 @import "_partial/button"
 @import "_partial/layout"
 @import "_partial/carousel"
@@ -42,8 +45,10 @@ body
 @import "_partial/album"
 @import "_partial/gallery"
 @import "_partial/highlight"
-@import "_partial/page"
 @import "_partial/home"
+@import "_partial/page"
+@import "_partial/docs"
+@import "_partial/tocbot"
 
 // Utilities
 @import "_utilities/display"
@@ -55,4 +60,5 @@ body
 @import "_utilities/shadows"
 @import "_utilities/filter"
 //
-@import "_utilities/safari"
+if safari
+  @import "_utilities/safari"

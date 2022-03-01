@@ -1,6 +1,6 @@
 <!-- Plugins -->
 <div class="container">
-  <%- partial('_partial/page/header') %>
+  <%- partial('_partial/page/heading') %>
   <div class="row flex-wrap">
     <% site.data[page.data].forEach(function(plugin){%>
       <%- partial('_partial/' + page.partial, {plugin: plugin}) %>

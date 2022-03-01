@@ -1,16 +1,16 @@
-<div class="col-4">
+<div class="col-3">
   <article class="archive-article archive-type-<%= post.layout %>">
     <div class="card shadow-hover">
       <%- partial('post/gallery') %>
       <div class="card-body bg-light">
-        <%- partial('post/title', {class_name: 'archive-article-title'}) %>
-        <div class="card-text"><%- post.excerpt %></div>
-        <%- partial('post/date', {class_name: 'archive-article-date', date_format: 'MMM D'}) %>
+        <%- partial('post/title', {class_name: 'article-title mb-0 line-clamp line-clamp-1'}) %>
+        <%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
+        <div class="card-text mt-3 line-clamp line-clamp-2"><%- post.excerpt %></div>
         <hr class="hr">
         <% if (theme.excerpt_link){ %>
-          <div class="article-more-link">
-            <a href="<%- url_for(post.path) %>#more"><%= theme.excerpt_link %></a>
-          </div>
+        <div class="article-more-link">
+          <a href="<%- url_for(post.path) %>#more"><%= theme.excerpt_link %></a>
+        </div>
         <% } %>
       </div>
     </div>

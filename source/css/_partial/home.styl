@@ -72,6 +72,27 @@
 .hero
   background-color: white
 
+@keyframes fly
+  0%
+    transform: translateY(0)
+  50%
+    transform: translateY(5%)
+  100%
+    transform: translateY(0)
+
+.player
+  position: relative
+  .player_1,.player_2
+    position: absolute
+    width: 16rem
+  .player_1
+    bottom: 0
+    left: -10%
+    animation: fly 5s ease-in-out infinite
+  .player_2
+    right: -10%
+    top: 0
+    animation: fly 5s linear infinite
 // _utilities/safari.styl
 
 // .carousel
