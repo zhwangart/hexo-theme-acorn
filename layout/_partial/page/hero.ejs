@@ -1,36 +1,18 @@
-<div class="hero mb-5">
-	<div class="container">
-		<div class="row align-items-center">
-			<div class="col-6">
-				<div class="p-5">
-					<h3><s>不会写代码</s></h3>
-						<p><s>不是程序“猿”</s></p>
-						<h2 class="text-primary">也可以建网站</h2>
-						<p>只需要改变 2 个颜色就会让你的站点焕然一新。Acorn 是一“颗”精心设计的支持移动端的 Hexo 主题，可适用于中小型企业门户或工作室等展示类网站的简单建设。</p>
-						<ul class="list-inline mt-5">
-							<li class="list-inline-item">
-								<a class="btn btn-lg btn-primary text-white" href="/docs/">开始体验</a>
-							</li>
-							<li class="list-inline-item">
-								<a class="btn btn-gray text-white" href="/design/">设计定制</a>
-							</li>
-						</ul>
+<div class="hero">
+	<figure class="hero-figure">
+		<img class="hero-figure-img" src="<%- theme.hero.image %>" alt="<%= config.title %>">
+		<figcaption>
+			<div class="container">
+				<div class="figure-inset">
+					<h2 class="h1"><%- theme.slogan.primary %></h2>
+					<p><%- theme.slogan.secondary %></p>
 				</div>
 			</div>
-			<div class="col-6">
-				<div class="player p-5">
-					<div class="safari shadow">
-						<div class="safari-header px-3">
-							<span class="safari-btns"></span>
-						</div>
-						<div class="safari-body">
-							<figure class="safari-example"></figure>
-						</div>
-					</div>
-					<img class="player_1" src="/images/illustrations/player_1.svg" alt="Player" role="img">
-					<img class="player_2" src="/images/illustrations/player_2.svg" alt="Player" role="img">
-				</div>
-			</div>
+		</figcaption>
+		<div class="learn-more">
+			<a class="anchor" href="#landingpage">
+				<img id="landingpage" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='white' viewBox='0 0 16 16'><path d='M8 3a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 3zm4 8a4 4 0 0 1-8 0V5a4 4 0 1 1 8 0v6zM8 0a5 5 0 0 0-5 5v6a5 5 0 0 0 10 0V5a5 5 0 0 0-5-5z'/></svg>" alt="">
+			</a>
 		</div>
-	</div>
+	</figure>
 </div>

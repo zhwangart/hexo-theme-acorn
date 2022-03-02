@@ -1,11 +1,11 @@
 <article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %>" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <% if (post.excerpt && index){ %>
-  <div class="card shadow-hover">
+  <div class="card rounded">
     <%- partial('post/gallery') %>
     <div class="card-body bg-light">
-      <%- partial('post/title', {class_name: 'article-title'}) %>
-      <div class="card-text"><%- post.excerpt %></div>
-      <%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
+			<%- partial('post/title', {class_name: 'article-title mb-0 line-clamp line-clamp-1'}) %>
+			<%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
+			<div class="card-text mt-3 line-clamp line-clamp-2"><%- post.excerpt %></div>
       <hr class="hr">
       <% if (theme.excerpt_link){ %>
       <div class="article-more-link">

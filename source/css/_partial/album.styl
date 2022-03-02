@@ -4,12 +4,12 @@
 .album-grid
   display: grid
   grid-auto-flow: row dense
-  grid-gap: border-width
+  grid-gap: spacer
   .album-grid-item
     position: relative
     overflow: hidden
     padding-bottom: 100%
-
+// cd-6
 .album-grid-6
   grid-template-columns: repeat(2, 1fr)
   @media mq-normal
@@ -22,6 +22,38 @@
         padding-bottom: 50%
       &:nth-of-type(2)
         grid-row-start: span 2
+// cd-5
+.album-grid-5
+  grid-template-columns: repeat(2, 1fr)
+  .album-grid-item
+    &:nth-of-type(2)
+      grid-column-start: span 2
+      padding-bottom: 50%
+  @media mq-normal
+    grid-template-columns: repeat(3, 1fr)
+  @media (min-width: 992px)
+    grid-template-columns: repeat(4, 1fr)
+    .album-grid-item
+      &:nth-of-type(1)
+        grid-row-start: span 2
+      &:nth-of-type(5)
+        grid-column-start: span 2
+        padding-bottom: 50%
+// cd-4
+.album-grid-4
+  grid-template-columns: repeat(6, 1fr)
+  .album-grid-item
+    &:nth-of-type(1)
+    &:nth-of-type(4)
+      grid-column-start: span 4
+      padding-bottom: 50%
+    &:nth-of-type(2)
+    &:nth-of-type(3)
+      grid-column-start: span 2
+      padding-bottom: 50%
+// cd-3
+.album-grid-3
+  grid-template-columns: repeat(3, 1fr)
 
 //    
 .album-art
@@ -34,6 +66,7 @@
   background-size: cover
   background-position: center
   background-repeat: no-repeat
+  border-radius: spacer
   &::after,
   .album-art-text
     position: absolute
