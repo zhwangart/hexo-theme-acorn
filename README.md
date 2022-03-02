@@ -2,6 +2,8 @@
 
 Acorn is a Hexo theme for small to medium sized businesses or studios.
 
+[Acorn Sample data](https://github.com/zhwangart/acorn-sample-data)
+
 [中文文档](https://acorn.imaging.xin/docs/)
 
 ## Example
