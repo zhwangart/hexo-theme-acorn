@@ -6,7 +6,7 @@
 	<div class="container">
 		<nav class="navbar d-flex justify-content-between align-items-center">
 			<a class="brand" href="<%- url_for() %>">
-				<img class="logo" src="<%- theme.brand %>" alt="<%= config.title %>" role="img">
+				<img class="logo" src="<%- url_for(theme.brand) %>" alt="<%= config.title %>" role="img">
 			</a>
 			<%- partial('_partial/menu', {class_name: 'main-nav'}) %>
 		</nav>

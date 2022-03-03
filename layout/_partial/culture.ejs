@@ -5,7 +5,7 @@
   <% for (var item in site.data.culture){%>
     <div class="col-4">
       <div class="card p-5 text-center">
-        <img class="mb-4" src="<%=site.data.culture[item]['cover'] %>" alt="<%=site.data.culture[item]['name'] %>" width="<%=site.data.culture[item]['cover_size'] %>" height="<%=site.data.culture[item]['cover_size'] %>">
+        <img class="mb-4" src="<%=url_for(site.data.culture[item]['cover']) %>" alt="<%=site.data.culture[item]['name'] %>" width="<%=site.data.culture[item]['cover_size'] %>" height="<%=site.data.culture[item]['cover_size'] %>">
         <div class="card-body p-0">
           <h4 class="card-title text-primary"><%=site.data.culture[item]['name'] %></h4>
           <p class="card-text"><%=site.data.culture[item]['description'] %></p>
