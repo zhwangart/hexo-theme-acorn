@@ -3,11 +3,11 @@
     <div class="col">
       <div class="card rounded bg-white">
         <a href="<%=url_for(site.data.stories[item]['link']) %>">
-          <img class="card-img" src="<%=site.data.stories[item]['cover'] %>" alt="<%=site.data.stories[item]['name'] %>">
+          <img class="card-img" src="<%=url_for(site.data.stories[item]['cover']) %>" alt="<%=site.data.stories[item]['name'] %>">
         </a>
         <div class="card-body px-4">
           <h5 class="card-title line-clamp line-clamp-1">
-            <a href="<%=site.data.stories[item]['link'] %>">
+            <a href="<%=url_for(site.data.stories[item]['link']) %>">
               <%=site.data.stories[item]['name'] %>
             </a>
           </h5>

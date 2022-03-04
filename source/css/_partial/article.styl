@@ -28,10 +28,11 @@
 
 .article-tag-list
   list-unstyled()
+  text-align: center
   &::before
     content: ''
     background-size: cover
-    background-image: url(/images/icons/tag.svg)
+    background-image: url(../images/icons/tag.svg)
     sizing(1em)
     display: inline-block
   .article-tag-list-item
@@ -55,6 +56,10 @@
       text-align: right
     .article-nav-caption
       color: dark-color
+
+.article-nav 
+  .article-nav-title
+    text-align: center
 
 // Article author avatar
 // Avatar
