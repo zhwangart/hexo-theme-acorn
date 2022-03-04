@@ -75,9 +75,9 @@ for name,value in theme
       background-color: lighten(value, 10%)
 
 .line-clamp
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
   overflow: hidden
-  display: -webkit-box
-  -webkit-box-orient: vertical
 
 for name in (1 2 3 4 5)
   .line-clamp-{name}

@@ -6,8 +6,9 @@ tweets: 推文
 prev: 上一页
 next: 下一页
 comment: 留言
-archive_a: 新闻动态
-archive_b: 新闻动态：%s
+archives: 新闻
+archive_a: 新闻
+archive_b: 新闻：%s
 page: 第 %d 页
 recent_posts: 最新文章
 newer: 前一篇
