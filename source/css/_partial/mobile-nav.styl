@@ -17,7 +17,7 @@ toggle-line   = 2px
   transition: transition-base
   &:active, .mobile-nav-on &
     opacity: 1
-  @media screen and (min-width: 768px)
+  @media media-sm
     display: none
 
 .mobile-nav-toggle-bar
@@ -44,7 +44,6 @@ toggle-line   = 2px
   .header-absolute &
     background: white
 
-
 #mobile-nav-dimmer
   position: absolute
   top: 0
@@ -57,7 +56,6 @@ toggle-line   = 2px
     width: 100%
     opacity: 0.7
     transform: translateX(-100%)
-
 
 #mobile-nav
   position: fixed
@@ -99,6 +97,17 @@ toggle-line   = 2px
       .nav-item-link
         color: primary-color
 
+.mobile-docs_menus
+  .menu
+    h6
+      padding: 0 spacer
+      margin: 0
+    .menu-item
+      .menu-item-link
+        display: block
+        padding: spacer
+        color: light-color
+
 .main
   transition: transition-base
   height: 100%
@@ -111,7 +120,10 @@ toggle-line   = 2px
     bottom: 0
 
 .navbar
-  @media mq-mobile
-    justify-content: center !important
+  justify-content: center
+  .main-nav
+    display: none
+  @media media-sm
+    justify-content: space-between
     .main-nav
-        display: none
+      display: block

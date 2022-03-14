@@ -44,5 +44,8 @@
   <% if (theme.favicon){ %>
     <link rel="shortcut icon" href="<%- theme.favicon %>">
   <% } %>
+  <% if (theme.keen_slider.enable){ %>
+    <%- css('//cdn.jsdelivr.net/npm/keen-slider@latest/keen-slider.min.css') %> 
+  <% } %>
   <%- css('css/style') %>
 </head>

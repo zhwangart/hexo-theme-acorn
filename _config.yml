@@ -31,6 +31,9 @@ video:
 ## Hero image
 hero: 
   image: /images/banner.jpg
+## keen-slider
+keen_slider: 
+  enable: true
 
 # Slogan
 slogan: 

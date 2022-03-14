@@ -2,5 +2,9 @@
 <div id="mobile-nav">
 	<div id="mobile-nav-inner">
 		<%- partial('_partial/menu', {class_name: 'mobile-nav'}) %>
+		<% if (page.layout == 'docs'){ %>
+			<hr class="hr mb-5" style="opacity: .25;">
+			<%- partial('../_docs/menu', {class_name: 'mobile-docs_menus'}) %>
+		<% } %>
 	</div>
 </div>

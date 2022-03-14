@@ -1,25 +1,30 @@
 //
 // Grid flex
 //
-.row
+.row, .row-row
   display: flex
-  flex-direction: column
-  margin: spacer * -1
+  margin: grid-gutter-width * -1
   .col
     flex: 1 1 auto
     padding: grid-gutter-width
 
-// Media Query
+for i in 1 2 3 4 5 6 7 8 9 10 11 12
+  .col-{i}
+    padding: grid-gutter-width
+    width: 100%
+    @media media-sm
+      width: 100% * (i/grid-columns)
+
 .row
-    flex-direction: column
-    @media mq-normal
-      flex-direction: row
+  flex-direction: column
+  @media media-sm
+    flex-direction: row
+
+.row-row
+  flex-direction: row
   for i in 1 2 3 4 5 6 7 8 9 10 11 12
     .col-{i}
-      padding: grid-gutter-width
-      width: 100%
-      @media mq-normal
-        width: 100% * (i/grid-columns)
+      width: 100% * (i/grid-columns)
 
 .no-gutters
   margin: 0

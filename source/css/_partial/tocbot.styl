@@ -5,6 +5,7 @@ ls-toc-spacer = 2rem
 js-toc-width  = 18rem
 
 .js-toc
+  display: none
   position: sticky
   float: right
   top: 0
@@ -14,7 +15,12 @@ js-toc-width  = 18rem
 
 .js-toc-content
   position: relative
-  margin-right: js-toc-width + ls-toc-spacer
+
+@media media-md
+  .js-toc
+    display: block
+  .js-toc-content
+    margin-right: js-toc-width + ls-toc-spacer
 
 .toc-list
   list-unstyled()

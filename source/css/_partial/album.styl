@@ -12,9 +12,9 @@
 // cd-6
 .album-grid-6
   grid-template-columns: repeat(2, 1fr)
-  @media mq-normal
+  @media media-sm
     grid-template-columns: repeat(3, 1fr)
-  @media (min-width: 992px)
+  @media media-md
     grid-template-columns: repeat(4, 1fr)
     .album-grid-item
       &:nth-of-type(1)
@@ -29,9 +29,9 @@
     &:nth-of-type(2)
       grid-column-start: span 2
       padding-bottom: 50%
-  @media mq-normal
+  @media media-sm
     grid-template-columns: repeat(3, 1fr)
-  @media (min-width: 992px)
+  @media media-md
     grid-template-columns: repeat(4, 1fr)
     .album-grid-item
       &:nth-of-type(1)

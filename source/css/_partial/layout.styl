@@ -6,9 +6,12 @@
   margin: 0 auto
 .container
   max-width: max-width
-  @media screen and (max-width: 768px)
-    padding-right: spacer
-    padding-left: spacer
+  padding-right: spacer
+  padding-left: spacer
+  @media screen and (min-width: @max-width) {
+    padding-right: 0
+    padding-left: 0
+  }
 .container-full
   max-width: 100%
 

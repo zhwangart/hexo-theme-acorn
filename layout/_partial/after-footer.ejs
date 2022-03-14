@@ -1,4 +1,47 @@
 <%- js('//cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js') %>
-<%- js('//cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js') %>
+<% if (theme.toc){ %>
+  <%- js('//cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js') %>
+<% } %>
+<% if (theme.keen_slider.enable){ %>
+  <%- js('//cdn.jsdelivr.net/npm/keen-slider@latest/keen-slider.js') %>
+  <script>
+    var slider = new KeenSlider(
+      "#my-keen-slider",
+      {
+        loop: true,
+      },
+      [
+        (slider) => {
+          let timeout
+          let mouseOver = false
+          function clearNextTimeout() {
+            clearTimeout(timeout)
+          }
+          function nextTimeout() {
+            clearTimeout(timeout)
+            if (mouseOver) return
+            timeout = setTimeout(() => {
+              slider.next()
+            }, 3000)
+          }
+          slider.on("created", () => {
+            slider.container.addEventListener("mouseover", () => {
+              mouseOver = true
+              clearNextTimeout()
+            })
+            slider.container.addEventListener("mouseout", () => {
+              mouseOver = false
+              nextTimeout()
+            })
+            nextTimeout()
+          })
+          slider.on("dragStarted", clearNextTimeout)
+          slider.on("animationEnded", nextTimeout)
+          slider.on("updated", nextTimeout)
+        },
+      ]
+    )
+  </script>
+<% } %>
 <%- js('/js/script') %>
 <%- js('/js/mobile-nav') %>
