@@ -20,8 +20,8 @@ beian:
 
 # Miscellaneous
 favicon: /favicon.ico
-webclip: /images/icons
-brand: /images/brand.svg
+webclip: /images/webclip
+brand:   /images/brand.svg
 
 # Jumbotron video & Hero image
 ## Jumbotron video
