@@ -10,7 +10,7 @@ menu:
 excerpt_link: 阅读全文
 
 # Toc
-toc: true
+toc: false
 
 # MIIT ICP/IP/DOMAIN
 beian: 
@@ -33,7 +33,7 @@ hero:
   image: /images/banner.jpg
 ## keen-slider
 keen_slider: 
-  enable: true
+  enable: false
 
 # Slogan
 slogan: 

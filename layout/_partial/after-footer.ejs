@@ -1,47 +1,59 @@
 <%- js('//cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js') %>
 <% if (theme.toc){ %>
-  <%- js('//cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js') %>
+	<%- js('//cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js') %>
+	<script>
+    tocbot.init({
+      // Where to render the table of contents.
+      tocSelector: '.js-toc',
+      // Where to grab the headings to build the table of contents.
+      contentSelector: '.js-toc-content',
+      // Which headings to grab inside of the contentSelector element.
+      headingSelector: 'h3, h4, h5',
+      // For headings inside relative or absolute positioned containers within content.
+      hasInnerContainers: true,
+    });
+	</script>
 <% } %>
 <% if (theme.keen_slider.enable){ %>
-  <%- js('//cdn.jsdelivr.net/npm/keen-slider@latest/keen-slider.js') %>
-  <script>
-    var slider = new KeenSlider(
-      "#my-keen-slider",
-      {
-        loop: true,
-      },
-      [
-        (slider) => {
-          let timeout
-          let mouseOver = false
-          function clearNextTimeout() {
-            clearTimeout(timeout)
-          }
-          function nextTimeout() {
-            clearTimeout(timeout)
-            if (mouseOver) return
-            timeout = setTimeout(() => {
-              slider.next()
-            }, 3000)
-          }
-          slider.on("created", () => {
-            slider.container.addEventListener("mouseover", () => {
-              mouseOver = true
-              clearNextTimeout()
-            })
-            slider.container.addEventListener("mouseout", () => {
-              mouseOver = false
-              nextTimeout()
-            })
-            nextTimeout()
-          })
-          slider.on("dragStarted", clearNextTimeout)
-          slider.on("animationEnded", nextTimeout)
-          slider.on("updated", nextTimeout)
-        },
-      ]
-    )
-  </script>
+	<%- js('//cdn.jsdelivr.net/npm/keen-slider@latest/keen-slider.js') %>
+	<script>
+		var slider = new KeenSlider(
+			"#my-keen-slider",
+			{
+				loop: true,
+			},
+			[
+				(slider) => {
+					let timeout
+					let mouseOver = false
+					function clearNextTimeout() {
+						clearTimeout(timeout)
+					}
+					function nextTimeout() {
+						clearTimeout(timeout)
+						if (mouseOver) return
+						timeout = setTimeout(() => {
+							slider.next()
+						}, 3000)
+					}
+					slider.on("created", () => {
+						slider.container.addEventListener("mouseover", () => {
+							mouseOver = true
+							clearNextTimeout()
+						})
+						slider.container.addEventListener("mouseout", () => {
+							mouseOver = false
+							nextTimeout()
+						})
+						nextTimeout()
+					})
+					slider.on("dragStarted", clearNextTimeout)
+					slider.on("animationEnded", nextTimeout)
+					slider.on("updated", nextTimeout)
+				},
+			]
+		)
+	</script>
 <% } %>
-<%- js('/js/script') %>
 <%- js('/js/mobile-nav') %>
+<%- js('/js/script') %>

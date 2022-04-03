@@ -9,7 +9,7 @@
 </section>
 
 <% for (var section in site.data.index){%>
-  <section class="section py-5 <%=site.data.index[section]['bg_color'] %>">
+  <section class="section py-5 <%=site.data.index[section]['bg_color'] %>" id="<%=site.data.index[section]['id'] %>">
     <div class="container<%=site.data.index[section]['fluid'] %>">
       <div class="section-heading text-center mb-5">
         <h3><%=site.data.index[section]['title'] %></h3>
