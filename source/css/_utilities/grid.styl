@@ -26,10 +26,21 @@ for i in 1 2 3 4 5 6 7 8 9 10 11 12
     .col-{i}
       width: 100% * (i/grid-columns)
 
+
+$padding-0
+  padding: 0
+
 .no-gutters
   margin: 0
-  > .col
-    padding: 0
+  .col
+    @extend $padding-0
   for i in 1 2 3 4 5 6 7 8 9 10 11 12
     .col-{i}
-      padding: 0
+      @extend $padding-0
+
+
+
+ 
+
+
+

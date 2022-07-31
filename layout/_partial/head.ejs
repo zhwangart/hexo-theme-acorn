@@ -27,8 +27,7 @@
   <% } else if (config.description){ %>
     <meta name="description" content="<%= config.description %>">
   <% } %>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <title><% if (title){ %><%= title %> | <% } %> <%= config.title %></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
   <title><% if (title){ %><%= title %> | <% } %> <%= config.title %></title>
   <% if (theme.webclip){ %>
     <link rel="apple-touch-icon" sizes="57x57" href="<%- theme.webclip %>/apple-touch-icon-57x57.png">
@@ -44,7 +43,8 @@
   <% if (theme.favicon){ %>
     <link rel="shortcut icon" href="<%- theme.favicon %>">
   <% } %>
-  <% if (theme.keen_slider.enable){ %>
+  <% if (theme.swiper.enable){ %>
+    <link rel="stylesheet" href="<%- url_for(theme.libs.swiper.css) %>"/>
   <% } %>
   <%- css('css/style') %>
 </head>

@@ -3,6 +3,6 @@
 -->
 <div class="instapic text-center">
   <% for (var item in site.data.instapic){%>
-    <img class="brand-img" src="<%=url_for(site.data.instapic[item]['cover']) %>" alt="<%=site.data.instapic[item]['name'] %>">
+    <img class="brand-img lazyload" data-src="<%=url_for(site.data.instapic[item]['cover']) %>" alt="<%=site.data.instapic[item]['name'] %>">
   <%} %>
 </div>

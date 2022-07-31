@@ -1,7 +1,7 @@
 <div class="col-4">
   <div class="card rounded">
     <a href="<%= url_for(plugin.link) %>">
-      <img class="card-img" src="<%= url_for(plugin.cover) %>" alt="<% plugin.name %>">
+      <img class="card-img lazyload" data-src="<%= url_for(plugin.cover) %>" alt="<% plugin.name %>">
     </a>
     <div class="card-body bg-light">
       <h5 class="card-title">

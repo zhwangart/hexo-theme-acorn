@@ -10,7 +10,7 @@ font-line-height  = 1.5
 
 // Color system
 // Bootstrap v4.3.1 (https://getbootstrap.com/)
-white      = #fff
+gray-000   = #fff
 gray-100   = #f8f9fa
 gray-200   = #e9ecef
 gray-300   = #dee2e6
@@ -45,7 +45,7 @@ theme = {
   light      : light-color
   gray       : gray-color
   dark       : dark-color
-  white      : white
+  white      : gray-000
 }
 
 // Link colors
@@ -55,7 +55,7 @@ link-active-color  = darken(primary-color, 10%)
 disabled-color     = gray-color
 
 // Body Colors
-body-background-color = white
+body-background-color = gray-000
 body-text-color       = dark-color
 
 // Border
@@ -87,6 +87,7 @@ transition-base   = all 0.3s ease-in-out 0s
 spacer  = 1rem
 
 spacers = {
+  "a" : auto
   "0" : 0
   "1" : spacer * .25
   "2" : spacer * .5

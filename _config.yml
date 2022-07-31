@@ -9,9 +9,6 @@ menu:
 # Content
 excerpt_link: 阅读全文
 
-# Toc
-toc: false
-
 # MIIT ICP/IP/DOMAIN
 beian: 
   enable: false
@@ -19,21 +16,26 @@ beian:
   url: https://beian.miit.gov.cn/
 
 # Miscellaneous
-favicon: /favicon.ico
+favicon: /images/favicon.ico
 webclip: /images/webclip
 brand:   /images/brand.svg
 
-# Jumbotron video & Hero image
+# Jumbotron video & Hero image & Swiper
 ## Jumbotron video
 video: 
-  overlay: true
-  path: /images/
+  overlay: false
+  path: /images/movie/
 ## Hero image
 hero: 
-  image: /images/banner.jpg
-## keen-slider
-keen_slider: 
+  image: /images/banner/banner.jpg
+## Swiper
+## https://github.com/nolimits4web/swiper
+swiper: 
   enable: false
+
+# Toc
+## https://github.com/tscanlin/tocbot
+toc: true
 
 # Slogan
 slogan: 
@@ -43,3 +45,11 @@ slogan:
   pages: 运维更智能 部署更方便 应用更便捷
   posts: 实践见真知既是最好的解释
 
+# Library
+libs:
+  feather: /libs/feather/feather.min.js # V4.29.0
+  lazysizes: /libs/lazysizes/lazysizes.min.js
+  tocbot: /libs/tocbot/tocbot.min.js
+  swiper: 
+    css: /libs/swiper/swiper-bundle.min.css
+    js:  /libs/swiper/swiper-bundle.min.js

@@ -1,0 +1,20 @@
+// Index style
+//
+.index-about
+  position: relative
+  z-index: 1
+  background-size: cover
+  background-position: center
+  background-image: url(/images/banner/city_scene.jpg)
+  &::before
+    content: ''
+    position: absolute
+    z-index: 2
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    background-image: linear-gradient(180deg, #00b5ef, #3388ff)
+    opacity: .9
+  .container
+    z-index: 3

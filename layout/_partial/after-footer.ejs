@@ -1,6 +1,7 @@
-<%- js('//cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js') %>
+<script src="<%- url_for(theme.libs.feather) %>"></script>
+<script src="<%- url_for(theme.libs.lazysizes) %>"></script>
 <% if (theme.toc){ %>
-	<%- js('//cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js') %>
+	<script src="<%- url_for(theme.libs.tocbot) %>"></script>
 	<script>
     tocbot.init({
       // Where to render the table of contents.
@@ -8,52 +9,26 @@
       // Where to grab the headings to build the table of contents.
       contentSelector: '.js-toc-content',
       // Which headings to grab inside of the contentSelector element.
-      headingSelector: 'h3, h4, h5',
+      headingSelector: 'h2, h3',
       // For headings inside relative or absolute positioned containers within content.
       hasInnerContainers: true,
     });
 	</script>
 <% } %>
-<% if (theme.keen_slider.enable){ %>
-	<%- js('//cdn.jsdelivr.net/npm/keen-slider@latest/keen-slider.js') %>
+
+<% if (theme.swiper.enable){ %>
+	<!-- Swiper JS -->
+	<script src="<%- url_for(theme.libs.swiper.js) %>"></script>
+	<!-- Initialize Swiper -->
 	<script>
-		var slider = new KeenSlider(
-			"#my-keen-slider",
-			{
-				loop: true,
+		var swiper = new Swiper(".oneSwiper", {
+			navigation: {
+				nextEl: ".swiper-button-next",
+				prevEl: ".swiper-button-prev",
 			},
-			[
-				(slider) => {
-					let timeout
-					let mouseOver = false
-					function clearNextTimeout() {
-						clearTimeout(timeout)
-					}
-					function nextTimeout() {
-						clearTimeout(timeout)
-						if (mouseOver) return
-						timeout = setTimeout(() => {
-							slider.next()
-						}, 3000)
-					}
-					slider.on("created", () => {
-						slider.container.addEventListener("mouseover", () => {
-							mouseOver = true
-							clearNextTimeout()
-						})
-						slider.container.addEventListener("mouseout", () => {
-							mouseOver = false
-							nextTimeout()
-						})
-						nextTimeout()
-					})
-					slider.on("dragStarted", clearNextTimeout)
-					slider.on("animationEnded", nextTimeout)
-					slider.on("updated", nextTimeout)
-				},
-			]
-		)
+		});
 	</script>
 <% } %>
+
 <%- js('/js/mobile-nav') %>
 <%- js('/js/script') %>

@@ -58,12 +58,19 @@ body
 @import "_utilities/flex"
 @import "_utilities/grid"
 @import "_utilities/list"
+@import "_utilities/sizing"
 @import "_utilities/spacing"
 @import "_utilities/borders"
 @import "_utilities/shadows"
 @import "_utilities/filter"
-//
-if keen-slider
-  @import "_partial/keen-slider"
+
+// Custom
+@import "_custom/index"
+@import "_custom/lazyloading"
+
+// Swiper
+if swiper
+  @import "_partial/swiper"
+
 if safari
   @import "_utilities/safari"

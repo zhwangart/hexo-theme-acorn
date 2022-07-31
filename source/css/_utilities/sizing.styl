@@ -1,0 +1,16 @@
+//
+// Sizing
+//
+size = {
+  "25": 25%
+  "50": 50%
+  "75": 75%
+  "100": 100%
+  auto: auto
+}
+
+for name, value in size
+  .w-{name}
+    width: value
+  .h-{name}
+    height: value
