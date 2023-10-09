@@ -1,11 +1,23 @@
 <% if (post.photos && post.photos.length){ %>
-  <% post.photos.forEach(function(photo, i){ %>
-    <% if (is_post()){ %>
-      <img class="artcle-cover-img lazyload" data-src="<%- url_for(photo) %>" itemprop="image" alt="">
-      <% } else { %>
-        <a class="card-img-link" href="<%- url_for(post.path) %>" rel="gallery_<%= post._id %>">
-          <img class="card-img lazyload" data-src="<%- url_for(photo) %>" itemprop="image" alt="gallery">
-        </a>
-      <% } %> 
-  <% }) %>
+  <% if (!is_post()){ %>
+    <a class="card-img-link" href="<%- url_for(post.path) %>" rel="gallery_<%= post._id %>">
+      <img class="card-img lazyload" data-src="<%- url_for(post.photos[0]) %>" itemprop="image" alt="gallery">
+    </a>
+  <% } else { %>
+    <% if (!theme.swiper.enable || post.photos.length == 1){ %>
+      <img class="article-cover-img lazyload" data-src="<%- url_for(post.photos[0]) %>" itemprop="image">
+    <% } else { %>
+      <div class="oneSwiper">
+        <div class="swiper-wrapper swiper-auto-height">
+          <% post.photos.forEach(function(photo, i){ %>
+            <div class="swiper-slide" style="background-size: cover; background-image: url(<%-url_for(photo)%>);">
+              <img class="article-cover-img lazyload" data-src="<%- url_for(photo) %>" itemprop="image" style="visibility: hidden;">
+            </div>
+          <% }) %>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    <% } %>
+  <% } %>
 <% } %>
