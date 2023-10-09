@@ -3,7 +3,6 @@
 //
 .article-cover
   position: relative
-  max-height: 20rem
   border-radius(border-radius-value)
   overflow: hidden
   .article-cover-img
@@ -11,6 +10,11 @@
     min-height: 100%
     max-width: 100%
     center-y()
+  // Media Query
+  @media media-sm-down
+    max-height: 20rem
+  @media media-sm
+    max-height: 50rem
 
 .article-inner
   padding: spacer
