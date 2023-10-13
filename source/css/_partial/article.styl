@@ -1,19 +1,16 @@
 //
 // Article
 //
-.article-cover
+.artcle-cover
   position: relative
+  max-height: 20rem
   border-radius(border-radius-value)
   overflow: hidden
-  .article-cover-img
+  .artcle-cover-img
     position: relative
     min-height: 100%
     max-width: 100%
-  // Media Query
-  @media media-sm-down
-    max-height: 20rem
-  @media media-sm
-    max-height: 50rem
+    center-y()
 
 .article-inner
   padding: spacer
